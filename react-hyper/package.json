@@ -1,51 +1,32 @@
 {
-  "name": "bulmin-and-react-hyper",
-  "private": true,
+  "name": "react-hyper",
   "version": "0.1.0",
-  "description": "Bulmin and React-Hyper monorepo",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/morteza-jamali/bulmin-and-react-hyper.git"
-  },
-  "author": "Morteza Jamali <mortezajamali4241@gmail.com> (https://morteza-jamali.github.io)",
   "license": "MIT",
   "scripts": {
-    "bolt": "./node_modules/.bin/bolt",
-    "clone": "git clone https://github.com/morteza-jamali/react-hyper.git && git clone https://github.com/morteza-jamali/bulmin.git",
-    "start": "yarn run bolt -- run clone && yarn run bolt -- install"
+    "bolt:nx": "../node_modules/.bin/nx",
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test",
+    "lint": "nx workspace-lint && nx lint",
+    "e2e": "nx e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "nx migrate latest",
+    "workspace-generator": "nx workspace-generator",
+    "dep-graph": "nx dep-graph",
+    "help": "nx help"
   },
-  "keywords": [
-    "react",
-    "react-hyper",
-    "hyper",
-    "hyperscript",
-    "helpers",
-    "dom",
-    "react-helpers",
-    "jsx",
-    "bulma",
-    "bulma-hyper",
-    "react-bulma",
-    "bulma-js",
-    "javascript",
-    "bulma-ts",
-    "typescript",
-    "bulmin",
-    "atomic",
-    "atomizer",
-    "atomic-bulma",
-    "mini-bulma"
-  ],
-  "bolt": {
-    "workspaces": [
-      "bulmin/package.json",
-      "react-hyper/package.json"
-    ]
-  },
-  "bugs": {
-    "url": "https://github.com/morteza-jamali/bulmin-and-react-hyper/issues"
-  },
-  "homepage": "https://github.com/morteza-jamali/bulmin-and-react-hyper#readme",
+  "private": true,
   "dependencies": {
     "@morteza-jamali/lineicons": "^2.0.1",
     "bulma": "^0.9.2",
@@ -89,7 +70,6 @@
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "babel-jest": "26.2.2",
-    "bolt": "^0.24.8",
     "cypress": "^6.0.1",
     "dotenv": "6.2.0",
     "eslint": "7.10.0",
@@ -111,5 +91,30 @@
     "typescript": "~4.0.3",
     "webpack-atomizer-loader": "^1.0.2"
   },
-  "main": "index.js"
+  "description": "Write React Applications in a smart way with React-Hyper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morteza-jamali/react-hyper.git"
+  },
+  "keywords": [
+    "react",
+    "hyper",
+    "hyperscript",
+    "react-hyper",
+    "react-hyperscript",
+    "helper",
+    "react-helper",
+    "r",
+    "renderer",
+    "jsx"
+  ],
+  "author": {
+    "name": "Morteza Jamali",
+    "email": "mortezajamali4241@gmail.com",
+    "url": "https://morteza-jamali.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/morteza-jamali/react-hyper/issues"
+  },
+  "homepage": "https://github.com/morteza-jamali/react-hyper#readme"
 }
